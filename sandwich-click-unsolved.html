@@ -33,7 +33,7 @@
       // ...
       let pbjEaten = 0;
       let cheeseEaten = 0;
-      let rostEaten = 0;
+      let roastEaten = 0;
 
       // ...
 
@@ -51,16 +51,22 @@
         $("#image-div").html("<img src='https://grist.files.wordpress.com/2016/12/peanut-butter-sandwich.jpg?w=1024&h=576&crop=1' alt='Peanut Butter and Jelly Sandwhich'>")
         alert("You now have Peant Butter all over your hands.");
         eaten("PB&J", pbjEaten);
-      });
+      })
 
       $("#grilledcheese").on("click", function(){
         cheeseEaten++;
         $("#image-div").html("<img alt='Grilled cheese sandwhich' src='https://images-gmi-pmc.edge-generalmills.com/bc0f82fd-7e02-44dd-845b-0e7dbd6533fb.jpg'>");
         alert("Yummy! Cheesey! Delecious!");
         eaten("grilled cheese", cheeseEaten);
-      });
-      // ...
+      })
       
+      $("#roastbeef").on("click", function () {
+        roastEaten++;
+        $("#image-div").html("<img alt='Roast beef sandwhich' src='https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/Roast_Beef-700x461.jpg'>");
+        alert("Ugh, this roast beef is past its prime.");
+        eaten('roast beef', roastEaten++);
+      });
+
     });
 
   </script>
