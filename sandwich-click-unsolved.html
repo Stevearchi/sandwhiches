@@ -18,6 +18,8 @@
   <h3 id="roastbeef">Roast Beef</h3>
 
   <div id="image-div"></div>
+  <!-- Set all images to  -->
+  <style>img {width: 400px; }</style> 
 
   <script type="text/javascript">
 
@@ -46,7 +48,7 @@
         alert("You have eaten " + number +" " + type + " sandwhich(s)")
       }
 
-      $("#pbj").on("click", function () {
+      $("#pbj").on("click", function (){
         pbjEaten++;
         $("#image-div").html("<img src='https://grist.files.wordpress.com/2016/12/peanut-butter-sandwich.jpg?w=1024&h=576&crop=1' alt='Peanut Butter and Jelly Sandwhich'>")
         alert("You now have Peant Butter all over your hands.");
@@ -64,7 +66,7 @@
         roastEaten++;
         $("#image-div").html("<img alt='Roast beef sandwhich' src='https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/Roast_Beef-700x461.jpg'>");
         alert("Ugh, this roast beef is past its prime.");
-        eaten('roast beef', roastEaten++);
+        eaten('roast beef', roastEaten);
       });
 
     });
