@@ -42,16 +42,25 @@
       // Here we create various on "click" functions which capture the clicks
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
+      let eaten = (type, number) => {
+        alert("You have eaten " + number +" " + type + " sandwhich(s)")
+      }
 
       $("#pbj").on("click", function () {
         pbjEaten++;
         $("#image-div").html("<img src='https://grist.files.wordpress.com/2016/12/peanut-butter-sandwich.jpg?w=1024&h=576&crop=1' alt='Peanut Butter and Jelly Sandwhich'>")
         alert("You now have Peant Butter all over your hands.");
-        alert("You have eaten " + pbjEaten + " PB&J sandwhiche(s)");
-      })
+        eaten("PB&J", pbjEaten);
+      });
 
+      $("#grilledcheese").on("click", function(){
+        cheeseEaten++;
+        $("#image-div").html("<img alt='Grilled cheese sandwhich' src='https://images-gmi-pmc.edge-generalmills.com/bc0f82fd-7e02-44dd-845b-0e7dbd6533fb.jpg'>");
+        alert("Yummy! Cheesey! Delecious!");
+        eaten("grilled cheese", cheeseEaten);
+      });
       // ...
-
+      
     });
 
   </script>
